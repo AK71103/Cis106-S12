@@ -1,0 +1,20 @@
+#PS12P2
+#Alexander Kazantzis
+#3-11-26
+
+
+Lst_Names = [
+    "Smith", "Johnson", "Williams", "Brown", "Jones",
+    "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"
+]
+
+Exm_Scores = [75,69,82,73,100,86,100,96,93,100]
+
+def Dsply_Scores(Names,Scores):
+    
+    print("Student Last Name\tExam Score")
+    print("----------------------------------")
+    for Name, Score in zip(Names, Scores):
+        print(f"{Name:<20}\t{Score}")
+
+Dsply_Scores(Lst_Names,Exm_Scores)
