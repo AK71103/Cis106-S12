@@ -1,0 +1,26 @@
+#PS12P1
+#Alexander Kazantzis
+#3-11-26
+
+def Dsply_Names(NameLst):
+    print("Original list of names")
+    for Name in NameLst:
+       print(Name)
+    print("xxxxxxxxxxxxxxxx")
+    
+
+def Dsply_Rvrse(NameLst):
+    print("Reversed order")
+    for Name in reversed(NameLst):
+        print(Name)
+    print("xxxxxxxxxxxxxxxx")
+
+#List of Names
+Lst_Names = [
+    "Smith", "Johnson", "Williams", "Brown", "Jones",
+    "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"
+]
+
+Dsply_Names(Lst_Names)
+
+Dsply_Rvrse(Lst_Names)
