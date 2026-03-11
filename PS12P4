@@ -1,0 +1,46 @@
+#PS12P4
+#Alexander Kazantzis
+#3-11-26
+
+Plyr_Data = """Smith 0.267
+Johnson 0.300
+Williams 0.285
+Jones 0.250
+Brown 0.312
+Davis 0.290
+Miller 0.275
+Wilson 0.260
+Moore 0.305
+Taylor 0.280"""
+
+Plyr_Nme = []
+Bat_Avg = []
+
+with open("player_data.txt", "w") as f:
+    f.write(Plyr_Data)
+with open("player_data.txt", "r") as f:
+    for line in f:
+        Player_Name, Batting_Avg = line.split()
+        Plyr_Nme.append(Player_Name)
+        Bat_Avg.append(float(Batting_Avg))
+
+def Dsply_Players(Nme_Lst,Avg_Lst):
+    print("\n--- Player Stats ---")
+    for i in range(len(Nme_Lst)):
+        print(f"Name: {Nme_Lst[i]:10} | Avg: {Avg_Lst[i]:.3f}")
+    print("--------------------\n")
+def Srch_Players(Nme_Lst,Avg_Lst):
+    target_name = target_name.capitalize() 
+    if target_name in name_list:
+        index = name_list.index(target_name)
+        print(f"FOUND: {name_list[index]} - Average: {avg_list[index]:.3f}")
+    else:
+        print(f"Player '{target_name}' not found.")
+
+Dsply_Players(Plyr_Nme,Bat_Avg)
+
+while True:
+    Srch_Nme = input("Enter last name to search (or 'quit' to exit): ").strip()
+    if Srch_Nme.lower() == 'quit':
+        break
+    Srch_Players(SrchNme, Plyr_Nme, Bat_Avg)
