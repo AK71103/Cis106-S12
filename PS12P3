@@ -1,0 +1,36 @@
+#PS12P3
+#Alexander Kazantzis
+#3-11-26
+def Dsply_HiLoScores(Names,Scores):
+    if not Scores or not Names:
+        print("Error: Input lists cannot be empty.")
+        return
+    # Finding the highest score
+    Hi_Score = 0
+    Hi_Index = -1
+    for i in range(len(Scores)):
+        if Scores[i] > Hi_Score:
+            Hi_Score = Scores[i]
+            Hi_Index = i
+    
+    # Finding the lowest score
+    Lo_Score = 999
+    Lo_Index = -1
+    for i in range(len(Scores)):
+        if Scores[i] < Lo_Score:
+            Lo_Score = Scores[i]
+            Lo_Index = i
+    
+    if Hi_Index != -1 and Lo_Index != -1:
+        print(f"Highest Score: {Hi_Score} ({Lst_Names[Hi_Index]})")
+        print(f"Lowest Score: {Lo_Score} ({Lst_Names[Lo_Index]})")
+    else:
+        print("Error: Could not process scores.")
+Lst_Names = [
+    "Smith", "Johnson", "Williams", "Brown", "Jones",
+    "Miller", "Davis", "Garcia", "Rodriguez", "Wilson"
+]
+
+Exm_Scores = [75,69,82,73,100,86,100,96,93,100]
+
+Dsply_HiLoScores(Lst_Names,Exm_Scores)
